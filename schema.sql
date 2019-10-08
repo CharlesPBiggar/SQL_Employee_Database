@@ -11,7 +11,7 @@ CREATE TABLE employees (
 
 -- departments table
 CREATE TABLE departments (
-    dept_no INTEGER,
+    dept_no VARCHAR(4),
     dept_name VARCHAR (50),
     PRIMARY KEY (dept_no)
 );
@@ -19,7 +19,7 @@ CREATE TABLE departments (
 -- dept_emp table
 CREATE TABLE dept_emp (
     emp_no INTEGER,
-    dept_no INTEGER,
+    dept_no VARCHAR(4),
     from_date DATE,
     to_date DATE,
     FOREIGN KEY (emp_no,) REFERENCES employees(emp_no),
@@ -28,7 +28,7 @@ CREATE TABLE dept_emp (
 
 -- dept_manager table
 CREATE TABLE dept_manager (
-    dept_no INTEGER,
+    dept_no VARCHAR(4),
     emp_no INTEGER,
     from_date DATE,
     to_date DATE,
